@@ -1,0 +1,159 @@
+/*configurações gerais para todo o site*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --lightcolor: #eabffa; /*rgb(234, 191, 250)*/
+    --barcolor: #880027; /*rgb(143, 0, 45)*/
+    --bodycolor: #821D2B; /*rgb(130, 29, 43)*/
+    --bthp: rgb(239 44 74); 
+}
+
+
+/*SESSÃO DO CABEÇALHO*/
+
+
+/*SESSÃO DO BODY*/
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+    height: auto;
+}
+
+
+/*SESSÃO DE PADRONIZAÇÃO DOS ELEMENTOS DO BODY*/
+
+.balloons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+}
+
+.balloon{
+    display: inline-block;
+    padding: 10px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid var(--bodycolor);
+    border-radius: 10px;
+    background: var(--bodycolor);
+    color: #FFF;
+    font-weight: 600;
+    transition: box-shadow 0.4s ease-in-out,
+                border-color 0.4s ease-in-out, 
+                padding 0.2s ease-in-out,
+                background-color 0.4s ease-in-out,
+                color 0.4s ease-in-out,
+                font-size 0.2s ease-in-out;
+}
+
+.balloon:hover {
+    background-color: var(--bthp);
+    box-shadow: 0 0 5px var(--bthp),
+                0 0 30px rgb(239 44 74 / 0.8),
+                0 0 45px rgb(239 44 74 / 0.7),
+                0 0 60px rgb(239 44 74 / 0.6);
+    border-color: transparent;
+    padding: 18px 60px;
+    font-size: 23px;
+}
+
+.balloon a{
+    text-decoration: none;
+    color: #FFF;
+    text-shadow: 2px 2px 5px #000;
+}
+
+/*.balloon--dark{
+    color: #FFF;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(130, 29, 43)) ;
+}*/
+
+.balloon--light{
+    color: #FFF;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(239, 44, 74)) ;
+}
+
+.section--bar--dark{
+    width: 350px;
+    height: 3px;
+    background-color: var(--bodycolor);
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.section--default--light h1,
+.section--default--dark h1{
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.section--default--light p,
+.section--default--dark p{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: 'Sunflower', sans-serif;
+
+}
+
+.banner--image{
+    min-height: 560px;
+    background: url(../images/Capasite.jpg);
+    background-position: top;
+    background-size: cover;
+
+}
+
+.section--default--light{
+    display: flex;
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center;
+    color: #FFF;
+}
+
+
+.section--default--dark{
+    display: flex;
+    background-color: #AAA;
+    color: #FFF;
+    padding: 20px 0px;
+    text-align: center;
+    height: 300px;
+}
+
+.footer--area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    height: 100px;
+}
+
+
+

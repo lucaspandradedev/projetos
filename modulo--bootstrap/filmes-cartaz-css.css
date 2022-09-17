@@ -1,0 +1,13 @@
+.filme{
+    background-color: #DDD;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.jumbo{
+    background-color: #eef3f8;
+}

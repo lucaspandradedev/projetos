@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./projeto-quiz-css.css">
+    <script type="text/javascript" src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+    <title>Projeto Quiz</title>
+</head>
+<body>
+    <main>
+        <div class="container-fluid  d-flex bg-light align-items-center area">
+            <div class="container d-flex justify-content-center">
+
+                <div class="modal fade" id="pergunta1" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel1" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="title1"></h5>
+                          <button onclick="limpar()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pb-0">
+                          <div class="col">
+                              <div class="row mb-3 bg-light alt"> <button onclick="erro1()" class="btn  btn-outline-primary btn-disabled" id="aw1">1)</button></div>
+                              <div class="row mb-3 bg-light alt"> <button onclick="erro1()" class="btn btn-outline-primary" id="aw2">2)</button></div>
+                              <div class="row mb-3 bg-light alt"> <button onclick="acerto1()" class="btn btn-outline-primary" id="aw3">3)</button></div>
+                              <div class="row mb-3 bg-light alt"> <button onclick="erro1()" class="btn btn-outline-primary" id="aw4">4)</button></div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button onclick="gerarQuestao2()" class="btn btn-primary" data-bs-target="#pergunta2" data-bs-toggle="modal" data-bs-dismiss="modal">Próxima pergunta</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="pergunta2" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="title2"></h5>
+                          <button onclick="limpar()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="col">
+                            <div class="row mb-3 bg-light"> <button onclick="erro2()" class="btn btn-outline-primary" id="aw21">1)</button></div>
+                            <div class="row mb-3 bg-light"> <button onclick="erro2()" class="btn btn-outline-primary" id="aw22">2)</button></div>
+                            <div class="row mb-3 bg-light"> <button onclick="acerto2()" class="btn btn-outline-primary" id="aw23">3)</button></div>
+                            <div class="row mb-3 bg-light"> <button onclick="erro2()" class="btn btn-outline-primary" id="aw24">4)</button></div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button onclick="gerarQuestao3()" class="btn btn-primary" data-bs-target="#pergunta3" data-bs-toggle="modal" data-bs-dismiss="modal">Próxima pergunta</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="pergunta3" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="title3"></h5>
+                          <button onclick="limpar()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="col">
+                            <div class="row mb-3 bg-light"> <button onclick="erro3()" class="btn btn-outline-primary" id="aw31">1)</button></div>
+                            <div class="row mb-3 bg-light"> <button onclick="acerto3()" class="btn btn-outline-primary" id="aw32">2)</button></div>
+                            <div class="row mb-3 bg-light"> <button onclick="erro3()" class="btn btn-outline-primary" id="aw33">3)</button></div>
+                            <div class="row mb-3 bg-light"> <button onclick="erro3()" class="btn btn-outline-primary" id="aw34">4)</button></div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button onclick="gerarQuestao4()" class="btn btn-primary" data-bs-target="#pergunta4" data-bs-toggle="modal" data-bs-dismiss="modal">Próxima pergunta</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="pergunta4" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="title4"></h5>
+                          <button onclick="limpar()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="col">
+                            <div class="row mb-3 bg-light"> <button onclick="acerto4()" class="btn btn-outline-primary" id="aw41">1)</button></div>
+                            <div class="row mb-3 bg-light"> <button onclick="erro4()" class="btn btn-outline-primary" id="aw42">2)</button></div>
+                            <div class="row mb-3 bg-light"> <button onclick="erro4()" class="btn btn-outline-primary" id="aw43">3)</button></div>
+                            <div class="row mb-3 bg-light"> <button onclick="erro4()" class="btn btn-outline-primary" id="aw44">4)</button></div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button onclick="gerarQuestao5()" class="btn btn-primary" data-bs-target="#pergunta5" data-bs-toggle="modal" data-bs-dismiss="modal">Próxima pergunta</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="pergunta5" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel5" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="title5"></h5>
+                          <button onclick="limpar()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="col">
+                            <div class="row mb-3 bg-light"> <button class="btn btn-outline-primary" id="aw51">1)</button></div>
+                            <div class="row mb-3 bg-light"> <button class="btn btn-outline-primary" id="aw52">2)</button></div>
+                            <div class="row mb-3 bg-light"> <button class="btn btn-outline-primary" id="aw53">3)</button></div>
+                            <div class="row mb-3 bg-light"> <button class="btn btn-outline-primary" id="aw54">4)</button></div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-success" data-bs-target="#pergunta1" data-bs-toggle="modal" data-bs-dismiss="modal">Finalizar Quiz</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <a onclick="gerarQuestao1()" class="btn-lg btn-primary text-decoration-none" data-bs-toggle="modal" href="#pergunta1" role="button">Iniciar Quiz !</a>
+
+            </div>
+        </div>
+    </main>
+
+    <button id="bteste">Botao teste</button>
+<script src="./assets/js/quiz.js"></script>
+</body>
+</html>

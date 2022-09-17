@@ -1,0 +1,111 @@
+.header--banner,
+.section--banner{
+    background-image: url(https://picsum.photos/1800/750);
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section--contact--banner{
+    background-image: url(https://picsum.photos/1800/750);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header--banner h1,
+.section--banner h1,
+.section--contact--banner h1{
+    color: #FFF;
+    text-shadow: 1px 2px 1px #000;
+}
+
+.header--banner h3,
+.section--banner h3,
+.section--contact--banner{
+    color: #FFF;
+    font-weight: 300;
+}
+
+.section--area--default{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.form--area{
+    padding: 30px 20%;
+}
+
+.bordered{
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 3px;
+    margin: 0px 10px;
+}
+
+.b-act{
+    background-color: rgba(70,70,70);
+}
+
+.c-grey{
+    background-color: #CCC;
+}
+
+.c-blur{
+    background-color: #ffffff10;
+    backdrop-filter: blur(10px);
+}
+
+.c-section{
+    padding: 0px;
+}
+
+/*.c-section img{
+    width: 100%;
+}*/
+
+.description{
+    padding: 20px;
+}
+
+.t-inp{
+    width: 380px;
+    height: 145px;
+    resize: none;
+}
+
+
+@media (max-width: 991px){
+    .bordered{
+        border: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+        margin: 0px;
+        padding: 15px;
+    }
+
+    .b-act{
+        background-color: transparent;
+    }
+
+    .navbar.nav:last-child{
+        border: 0;
+    }
+
+    .t-inp{
+        width: 250px;
+        height: 145px;
+        resize: none;
+    }
+
+    .form--area{
+        padding: 10% 10%;
+    }
+}
